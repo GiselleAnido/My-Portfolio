@@ -82,9 +82,9 @@ section{
 .card{
     width: 200px;
     height: 300px;
-    border: 1px solid;
-    box-shadow: 1px 5px 20px 5px rgba(134, 212, 226, 0.705);
-    border-radius: 4%;
+    border: 1px solid rgba(41, 240, 240, 0.658);
+   
+    border-radius: 2%;
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -98,8 +98,9 @@ section{
 }
 
 .card:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 1s;
+    box-shadow:  1px 5px 50px 10px rgba(41, 240, 240, 0.849);
 }
 
 .container :nth-child(1){
@@ -110,27 +111,29 @@ section{
 
 
 #aboutme :nth-child(1), .contact-form p, #work p{
-    font-size: 70px;
-    font-family: 'Monoton', cursive;
-    color: rgba(214, 108, 205, 0.938);
-    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+    font-size: 80px;
+    font-family: 'Anek Telugu', sans-serif;
+    color: white;
+   
     margin-bottom: 20px;
     
 }
 
 #aboutme p{
     font-size: 20px;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
 }
 
 p , h1, label, a{
     color: white;
 }
 
-#aboutme p span:hover , .contact-form p:hover, #work p:hover{
-    color: rgba(156, 240, 240, 0.849);
+
+
+#aboutme p span:hover , .contact-form p:hover{
+    color: rgba(41, 240, 240, 0.849);
     animation: shake 0.5s infinite ;
-    transition: 0.9s;
+    transition: 1s;
     display: inline-block;
     
 }
@@ -163,11 +166,25 @@ footer{
 
 }
 i{
-   
+   color: rgba(41, 240, 240, 0.849);
     font-size: 50px;
     margin: 20px;
+
 }
 
-a:hover, i:hover{
-    color: rgba(155, 247, 247, 0.849);
+a:hover, i:hover, .card a{
+    color: white;
 }
+
+
+
+
+#aboutme p, a{
+    color: rgba(41, 240, 240, 0.849);
+}
+
+#work p:hover{
+    color: rgba(41, 240, 240, 0.849);
+    transition: 1s;
+}
+
