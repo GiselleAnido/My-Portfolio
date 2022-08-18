@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -6,14 +6,14 @@
     scroll-behavior: smooth;
 }
 
-:root{
+:root {
     --blue: rgba(41, 240, 240, 0.658);
 }
 
-header{
-   
-    
-   
+header {
+
+
+
     position: fixed;
     top: 0;
     left: 0;
@@ -22,29 +22,47 @@ header{
     width: 100vw;
 }
 
-a{
+section {
+    height: 100vh;
+}
+
+a {
     text-decoration: none;
 }
 
+p,
+h1,
+label,
+a:hover,
+i:hover,
+.card a {
+    color: white;
+
+}
+
+header a:hover {
+    border-bottom: 1px solid var(--blue);
+    transition: 0.3s;
+}
+
+/*--------------HOME SECTION-------------------------*/
+
 ul {
     width: 100vw;
-    
+
     display: flex;
     justify-content: end;
     list-style: none;
 }
 
-li{
+li {
     margin: 20px;
     margin-right: 50px;
 }
 
-section{
-    height: 100vh;
-}
 
 
-#aboutme{
+#aboutme {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -53,37 +71,59 @@ section{
     text-align: center;
 }
 
-#work{
+#aboutme :nth-child(1),
+.contact-form p,
+#work p {
+    font-size: 80px;
+    font-family: 'Exo 2', sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+
+}
+
+#aboutme p {
+    font-size: 20px;
+    letter-spacing: 0.2rem;
+    margin-bottom: 20px;
+}
+
+#aboutme p span:hover,
+.contact-form p:hover {
+    color: var(--blue);
+    animation: shake 0.5s infinite;
+    transition: 1s;
+    display: inline-block;
+
+}
+
+#aboutme p,
+a {
+    color: rgba(41, 240, 240, 0.849);
+}
+
+/*-------------------WORK SECTION----------------------*/
+
+#work {
     padding-top: 2vh;
     height: 100vh;
     display: block;
     text-align: center;
 }
 
-#work p{
-    margin: 8vh;
+#work p {
+    margin: 3vh;
+
 }
 
-#contact{
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-.container{
+.container {
     display: grid;
-    grid-template: 1fr / repeat(auto-fit, minmax(200px, 1fr)) ;
+    grid-template: 1fr / repeat(auto-fit, minmax(200px, 1fr));
     margin: 70px;
     gap: 10px;
-    
+
 }
 
-
-
-.card{
+.card {
     width: 200px;
     height: 300px;
     border: 1px solid var(--blue);
@@ -95,112 +135,119 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     font-size: 2rem;
-    
+
 }
 
-.card:hover{
+#work .card p {
+    font-size: 1rem;
+
+}
+
+.card:hover {
     transform: scale(1.1);
     transition: 1s;
-    box-shadow:  1px 5px 50px 10px var(--blue);
+    box-shadow: 1px 5px 50px 10px var(--blue);
 }
 
-.container :nth-child(1){
+.container :nth-child(1) {
     background-image: url(./IMG/Screenshot\ from\ 2022-08-17\ 16-48-13.png);
-    
-    
+
+
 }
 
-
-#aboutme :nth-child(1), .contact-form p, #work p{
-    font-size: 80px;
-    font-family: 'Exo 2', sans-serif;
-    color: white;
-    margin-bottom: 20px;
-    
-}
-
-#aboutme p{
-    font-size: 20px;
-    letter-spacing: 0.2rem;
-}
-
-p , h1, label, a:hover, i:hover, .card a{
-    color: white;
-}
-
-header a:hover{
-    border-bottom: 1px solid var(--blue);
-    transition: 0.5s;
-}
-
-
-
-#aboutme p span:hover , .contact-form p:hover{
-    color: var(--blue);
-    animation: shake 0.5s infinite ;
+#work p:hover {
+    color: rgba(41, 240, 240, 0.849);
     transition: 1s;
-    display: inline-block;
-    
 }
 
-@keyframes shake {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    25% { transform: translate(5px, 5px) rotate(5deg); }
-    50% { transform: translate(0, 0) rotate(0eg); }
-    75% { transform: translate(-5px, 5px) rotate(-5deg); }
-    100% { transform: translate(0, 0) rotate(0deg); }
-  }
 
 
-form{
-   display: flex;
-   flex-direction: column;
-   
+
+/*----------------------CONTACT SECTION----------------------*/
+
+#contact {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-label, input, textarea {
-    margin: 1px
+form {
+    display: flex;
+    flex-direction: column;
+
 }
 
-footer{
+#contact p {
+    margin-bottom: 25px;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus,
+input[type=submit] {
+    outline: none;
+    border-color: var(--blue);
+}
+
+input[type=submit] {
+    margin-top: 20px;
+    padding: 8px;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+textarea {
+    margin-top: 8px;
+    color: white;
+}
+
+input[type=email],
+input[type=text] {
+    margin-bottom: 12px;
+    height: 2rem;
+    color: white;
+}
+
+/*-----------------FOOTER------------------------------*/
+
+footer {
     display: flex;
     justify-content: center;
 
 }
-i{
-   color: var(--blue);
+
+i {
+    color: var(--blue);
     font-size: 50px;
     margin: 20px;
 
 }
 
-#aboutme p, a{
-    color: rgba(41, 240, 240, 0.849);
+/*-------------ANIMATION-----------------------------------*/
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(5px, 5px) rotate(5deg);
+    }
+
+    50% {
+        transform: translate(0, 0) rotate(0eg);
+    }
+
+    75% {
+        transform: translate(-5px, 5px) rotate(-5deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
 }
-
-#work p:hover{
-    color: rgba(41, 240, 240, 0.849);
-    transition: 1s;
-}
-
-input[type=text]:focus, input[type=email]:focus, textarea:focus, input[type=submit] {
-    outline: none;
-    border-color: var(--blue);
-  }
-
-  input[type=submit]{
-    margin-top: 20px;
-   padding: 8px;
-    color: white;
-    font-size: 1.3rem;
-  }
- textarea {
-    margin-top: 8px;
- }
-
- input[type=email]{
-    margin-bottom: 12px;
- }
-
