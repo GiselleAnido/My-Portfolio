@@ -6,6 +6,10 @@
     scroll-behavior: smooth;
 }
 
+:root{
+    --blue: rgba(41, 240, 240, 0.658);
+}
+
 header{
    
     
@@ -82,8 +86,7 @@ section{
 .card{
     width: 200px;
     height: 300px;
-    border: 1px solid rgba(41, 240, 240, 0.658);
-   
+    border: 1px solid var(--blue);
     border-radius: 2%;
 
     background-repeat: no-repeat;
@@ -100,7 +103,7 @@ section{
 .card:hover{
     transform: scale(1.1);
     transition: 1s;
-    box-shadow:  1px 5px 50px 10px rgba(41, 240, 240, 0.849);
+    box-shadow:  1px 5px 50px 10px var(--blue);
 }
 
 .container :nth-child(1){
@@ -112,9 +115,8 @@ section{
 
 #aboutme :nth-child(1), .contact-form p, #work p{
     font-size: 80px;
-    font-family: 'Anek Telugu', sans-serif;
+    font-family: 'Exo 2', sans-serif;
     color: white;
-   
     margin-bottom: 20px;
     
 }
@@ -124,14 +126,19 @@ section{
     letter-spacing: 0.2rem;
 }
 
-p , h1, label, a{
+p , h1, label, a:hover, i:hover, .card a{
     color: white;
+}
+
+header a:hover{
+    border-bottom: 1px solid var(--blue);
+    transition: 0.5s;
 }
 
 
 
 #aboutme p span:hover , .contact-form p:hover{
-    color: rgba(41, 240, 240, 0.849);
+    color: var(--blue);
     animation: shake 0.5s infinite ;
     transition: 1s;
     display: inline-block;
@@ -145,9 +152,6 @@ p , h1, label, a{
     75% { transform: translate(-5px, 5px) rotate(-5deg); }
     100% { transform: translate(0, 0) rotate(0deg); }
   }
-
-
-
 
 
 form{
@@ -166,18 +170,11 @@ footer{
 
 }
 i{
-   color: rgba(41, 240, 240, 0.849);
+   color: var(--blue);
     font-size: 50px;
     margin: 20px;
 
 }
-
-a:hover, i:hover, .card a{
-    color: white;
-}
-
-
-
 
 #aboutme p, a{
     color: rgba(41, 240, 240, 0.849);
@@ -187,4 +184,23 @@ a:hover, i:hover, .card a{
     color: rgba(41, 240, 240, 0.849);
     transition: 1s;
 }
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus, input[type=submit] {
+    outline: none;
+    border-color: var(--blue);
+  }
+
+  input[type=submit]{
+    margin-top: 20px;
+   padding: 8px;
+    color: white;
+    font-size: 1.3rem;
+  }
+ textarea {
+    margin-top: 8px;
+ }
+
+ input[type=email]{
+    margin-bottom: 12px;
+ }
 
