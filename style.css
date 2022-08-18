@@ -12,8 +12,6 @@
 
 header {
 
-
-
     position: fixed;
     top: 0;
     left: 0;
@@ -60,8 +58,6 @@ li {
     margin-right: 50px;
 }
 
-
-
 #aboutme {
     display: flex;
     flex-direction: column;
@@ -98,7 +94,7 @@ li {
 
 #aboutme p,
 a {
-    color: rgba(41, 240, 240, 0.849);
+    color: var(--blue);
 }
 
 /*-------------------WORK SECTION----------------------*/
